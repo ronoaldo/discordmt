@@ -202,7 +202,7 @@ async def status(ctx, *, args=None):
 async def runServer():
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, 'localhost', port)
+    site = web.TCPSite(runner, '0.0.0.0', port)
     await site.start()
 
 async def runBot():
